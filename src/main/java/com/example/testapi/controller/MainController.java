@@ -1,6 +1,5 @@
 package com.example.testapi.controller;
 
-import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -11,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.testapi.entity.Menuu;
-import com.example.testapi.entity.SubMenu;
 import com.example.testapi.service.AgentService;
 
 @RestController
@@ -33,6 +31,7 @@ public class MainController {
         return menu;
         
     }
+    
     
 
 //    @GetMapping("/submenus")
@@ -56,29 +55,6 @@ public class MainController {
 
         return menuList;
     }
-//    public List<Menuu> getMenuu() {
-//        List<Menuu> menuList = agentService.getMenuuList();
-//
-//        for (Menuu menu : menuList) {
-//            menu.setSubMenu(agentService.getSubMenuOfMenu(menu.getMenuId()));
-//        }
-//
-//        return menuList;
-//    }
-//    public List<MenuWithSubmenu> getMenuu() {
-//        List<MenuWithSubmenu> menuWithSubmenuList = new ArrayList<>();
-//
-//        List<Menuu> menuList = agentService.getMenuuList();
-//
-//        for (Menuu menu : menuList) {
-//            MenuWithSubmenu menuWithSubmenu = new MenuWithSubmenu();
-//            menuWithSubmenu.setMenu(menu);
-//            menuWithSubmenu.setSubMenuList(agentService.getSubMenuOfMenu(menu.getMenuId()));
-//            menuWithSubmenuList.add(menuWithSubmenu);
-//        }
-//
-//        return menuWithSubmenuList;
-//    }
 
 //    @GetMapping("/submenu/{subMenuId}")
 //    public SubMenu getSubMenu(@PathVariable Long subMenuId) {

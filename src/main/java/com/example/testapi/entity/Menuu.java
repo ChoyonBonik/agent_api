@@ -10,7 +10,6 @@ public class Menuu {
 	private Boolean child;
 	private String logo;
 	
-	
     List<SubMenu> subMenu;
 	
 	public Menuu(Long menuId, String header, Boolean child, String logo) {
@@ -21,11 +20,6 @@ public class Menuu {
 		this.logo = logo;
 	}
 	
-	
-	
-	
-
-
 
 	public Menuu(Long menuId, String header, Boolean child, String logo, List<SubMenu> subMenu) {
 		super();
@@ -37,17 +31,10 @@ public class Menuu {
 	}
 
 
-
-
-
-
-
 	public Menuu() {
 		
 	}
-
-
-
+	
 	public Long getMenuId() {
 		return menuId;
 	}
@@ -60,16 +47,13 @@ public class Menuu {
 		return header;
 	}
 
-
 	public void setHeader(String header) {
 		this.header = header;
 	}
 
-
 	public Boolean getChild() {
 		return child;
 	}
-
 
 	public void setChild(Boolean child) {
 		this.child = child;
@@ -83,26 +67,13 @@ public class Menuu {
 		this.logo = logo;
 	}
 
-
-
-
-
-
-
 	public List<SubMenu> getSubMenu() {
 		return subMenu;
 	}
-
-
-
-
-
-
 
 	public void setSubMenu(List<SubMenu> subMenu) {
 		this.subMenu = subMenu;
 	}
 
-	
 	
 }

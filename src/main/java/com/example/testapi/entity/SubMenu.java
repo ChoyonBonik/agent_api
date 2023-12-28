@@ -15,19 +15,14 @@ public class SubMenu {
 		this.menuId = menuId;
 	}
 	
-	
 
 	public Long getSubMenuId() {
 		return subMenuId;
 	}
 
-
-
 	public void setSubMenuId(Long subMenuId) {
 		this.subMenuId = subMenuId;
 	}
-
-
 
 	public String getHeader() {
 		return header;
