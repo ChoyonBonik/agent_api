@@ -14,7 +14,7 @@ import com.example.testapi.service.AgentService;
 
 @RestController
 @RequestMapping("/main")
-public class MainController {
+public class MenuController {
 	
 	@Autowired
     private AgentService agentService;

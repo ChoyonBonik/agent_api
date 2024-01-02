@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
+import com.example.testapi.entity.DrawerElement;
 import com.example.testapi.entity.Menuu;
 import com.example.testapi.entity.SubMenu;
 
@@ -34,6 +35,21 @@ public class AgentServiceImpl implements AgentService{
             new SubMenu(43L, "Move Money", "https://picsum.photos/400", 4L),
             new SubMenu(44L, "Move Money", "https://picsum.photos/400", 4L)
     );
+    
+
+    private final List<DrawerElement> drawerElementList= List.of(
+            new DrawerElement(1L, "HOME", "https://picsum.photos/400"),
+            new DrawerElement(2L, "BANK ACCOUNT DETAILS", "https://picsum.photos/400"),
+            new DrawerElement(3L, "SUMMARIES", "https://picsum.photos/400"),
+            new DrawerElement(4L, "ABOUT US", "https://picsum.photos/400"),
+            new DrawerElement(5L, "SETTINGS", "https://picsum.photos/400"),
+            new DrawerElement(6L, "LOGOUT", "https://picsum.photos/400")
+    );
+    
+    
+
+    
+    
     
    
 
@@ -67,6 +83,12 @@ public class AgentServiceImpl implements AgentService{
 	public Menuu getMenuu(Long menuId) {
 		
 		return this.menuList.stream().filter(menu -> menu.getMenuId().equals(menuId)).findAny().orElse(null);
+	}
+
+	@Override
+	public List<DrawerElement> getDrawerElementList() {
+		
+		return this.drawerElementList;
 	}
 
 

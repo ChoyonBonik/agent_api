@@ -1,6 +1,7 @@
 package com.example.testapi.service;
 import java.util.List;
 
+import com.example.testapi.entity.DrawerElement;
 import com.example.testapi.entity.Menuu;
 import com.example.testapi.entity.SubMenu;
 
@@ -17,4 +18,13 @@ public interface AgentService {
 	public List<SubMenu> getSubMenuOfMenu(Long menuId);
 
 	public Menuu getMenuu(Long menuId);
+
+	
+
+
+
+	List<DrawerElement> getDrawerElementList();
+	
+	
+
 }
