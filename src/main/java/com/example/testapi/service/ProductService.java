@@ -4,8 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import org.springframework.web.bind.annotation.GetMapping;
-
 import com.example.testapi.entity.Attribute;
 import com.example.testapi.entity.Item;
 import com.example.testapi.entity.Product;
@@ -18,7 +16,6 @@ public class ProductService {
         List<Product> products = new ArrayList<>();
         products.add(createSampleProduct(1));
         products.add(createSampleProduct(2));
-        // Add more products as needed
 
         return products;
     }
@@ -72,15 +69,10 @@ public class ProductService {
         return product;
     }
     
-    @GetMapping("/2")
-    public Product getProduct2() {
-       
-        return createSampleProduct(2);
-    }
     
     private Product createSampleProduct(int productId) {
         
-        Product product = new Product(0, null, null, null, 0, 0, null, null, null, null, null, null, null);
+        Product product = new Product(productId, null, null, null, productId, productId, null, null, null, null, null, null, null);
         product.setId(2);
         product.setImg("assets/img/prods-sm/6.png");
         product.setName("Pepperoni Pizza");
@@ -104,7 +96,7 @@ public class ProductService {
         attribute.setIcon("flaticon-bread-roll");
         attribute.setType("radio");
 
-        Item item = new Item(null, 0, false);
+        Item item = new Item(null, productId, false);
         item.setTitle("Regular");
         item.setAddprice(0.00);
         item.setState(true);
@@ -115,7 +107,7 @@ public class ProductService {
         product.setLongdescription("Anim pariatur cliche reprehenderit");
 
         // Set reviews
-        Review review = new Review(null, null, null, 0, null);
+        Review review = new Review(null, null, null, productId, null);
         review.setImg("assets/img/people/1.jpg");
         review.setName("Henry Crow");
         review.setDate("January 13, 2021");
@@ -130,5 +122,7 @@ public class ProductService {
 
         return product;
     }
+    
+    
 
 }
