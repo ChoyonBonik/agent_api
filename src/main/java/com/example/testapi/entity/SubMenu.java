@@ -6,13 +6,15 @@ public class SubMenu {
 	private String header;
 	private String logo;
 	private Long menuId;
+	private String path;
 	
-	public SubMenu(Long subMenuId, String header, String logo, Long menuId) {
+	public SubMenu(Long subMenuId, String header, String logo, Long menuId, String path) {
 		
 		this.subMenuId = subMenuId;
 		this.header = header;
 		this.logo = logo;
 		this.menuId = menuId;
+		this.path = path;
 	}
 	
 
@@ -47,5 +49,15 @@ public class SubMenu {
 	public void setMenuId(Long menuId) {
 		this.menuId = menuId;
 	}
+
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
+	}
+	
 
 }

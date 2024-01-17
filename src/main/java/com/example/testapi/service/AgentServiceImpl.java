@@ -14,26 +14,22 @@ import com.example.testapi.entity.SubMenu;
 public class AgentServiceImpl implements AgentService{
 	
 	private final List<Menuu> menuList = List.of(
-            new Menuu(1L, "Agent Service", true, "https://picsum.photos/200/300"),
-            new Menuu(2L, "Agent Service", true, "https://picsum.photos/200"),
-            new Menuu(3L, "Agent Service", false, "https://picsum.photos/500"),
-            new Menuu(4L, "Agent Service", true, "https://picsum.photos/1000")
+            new Menuu(1L, "Home Pages", true, "https://picsum.photos/200/300"),
+            new Menuu(2L, "Pages", true, "https://picsum.photos/200"),
+            new Menuu(3L, "Menu", true, "https://picsum.photos/500"),
+            new Menuu(4L, "Location", false, "https://picsum.photos/1000")
     );
 
     private final List<SubMenu> subMenuList = List.of(
-            new SubMenu(11L, "Move Money", "https://picsum.photos/900", 1L),
-            new SubMenu(12L, "Move Money", "https://picsum.photos/100", 1L),
-            new SubMenu(21L, "Move Money", "https://picsum.photos/400", 2L),
-            new SubMenu(22L, "Move Money", "https://picsum.photos/400", 2L),
-            new SubMenu(23L, "Move Money", "https://picsum.photos/400", 2L),
-            new SubMenu(24L, "Move Money", "https://picsum.photos/400", 2L),
-            new SubMenu(25L, "Move Money", "https://picsum.photos/400", 2L),
-            new SubMenu(31L, "Move Money", "https://picsum.photos/400", 3L),
-            new SubMenu(32L, "Move Money", "https://picsum.photos/400", 3L),
-            new SubMenu(41L, "Move Money", "https://picsum.photos/400", 4L),
-            new SubMenu(42L, "Move Money", "https://picsum.photos/400", 4L),
-            new SubMenu(43L, "Move Money", "https://picsum.photos/400", 4L),
-            new SubMenu(44L, "Move Money", "https://picsum.photos/400", 4L)
+            new SubMenu(11L, "Home v1", "https://picsum.photos/900", 1L, "/"),
+            new SubMenu(12L, "Home v2", "https://picsum.photos/100", 1L, "/home-v2"),
+            new SubMenu(21L, "About Us", "https://picsum.photos/400", 2L, "/about"),
+            new SubMenu(22L, "Login", "https://picsum.photos/400", 2L, "/login"),
+            new SubMenu(23L, "Sign Up", "https://picsum.photos/400", 2L, "/register"),
+            new SubMenu(24L, "Checkout", "https://picsum.photos/400", 2L, "/checkout"),
+            new SubMenu(25L, "Cart", "https://picsum.photos/400", 2L, "/cart"),
+            new SubMenu(31L, "Menu v1", "https://picsum.photos/400", 3L, "/menu-v1"),
+            new SubMenu(32L, "Menu v2", "https://picsum.photos/400", 3L, "/menu-v2")
     );
     
 
